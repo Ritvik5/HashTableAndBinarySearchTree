@@ -16,9 +16,29 @@
             //string hash5 = hash.Get("5");
             //Console.WriteLine("5th index value is: " + hash5);
 
-            string obj = "to be or not to be";
+            // UC1-Frequency of words in sentence - "to be or not to be" 
 
-            string[] words = obj.Split(' ');
+            //string obj = "to be or not to be";
+
+            //string[] words = obj.Split(' ');
+
+            //MyMapNode<string, int> wordFrequencyMap = new MyMapNode<string, int>(words.Length);
+
+            //foreach (string word in words)
+            //{
+            //    int frequency = wordFrequencyMap.Get(word);
+            //    wordFrequencyMap.Add(word, frequency + 1);
+            //}
+            //foreach (var item in wordFrequencyMap.GetAllItems())
+            //{
+            //    Console.WriteLine($"Word: {item.Key}, Frequency: {item.Value}");
+            //}
+
+            //UC2-- Frequency of words in Large Paragraph
+
+            string obj2 = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+            
+            string[] words = obj2.Split(' ');
 
             MyMapNode<string, int> wordFrequencyMap = new MyMapNode<string, int>(words.Length);
 
@@ -27,6 +47,7 @@
                 int frequency = wordFrequencyMap.Get(word);
                 wordFrequencyMap.Add(word, frequency + 1);
             }
+
             foreach (var item in wordFrequencyMap.GetAllItems())
             {
                 Console.WriteLine($"Word: {item.Key}, Frequency: {item.Value}");
