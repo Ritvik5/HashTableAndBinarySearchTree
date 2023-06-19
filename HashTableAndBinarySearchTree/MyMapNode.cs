@@ -31,7 +31,7 @@ namespace HashTableAndBinarySearchTree
             linkedList.AddLast(item);
         }
 
-        public void Remove(K key)
+        public void Remove(K key,string word)
         {
             int position = GetArrayPosition(key);
             LinkedList<KeyValuePair<K, V>> linkedlist = GetLinkedList(position);
@@ -39,7 +39,7 @@ namespace HashTableAndBinarySearchTree
             KeyValuePair<K, V> founditem = default(KeyValuePair<K, V>);
             foreach (KeyValuePair<K, V> item in linkedlist)
             {
-                if (item.Key.Equals(key))
+                if (item.Value.Equals(word))
                 {
                     itemfound = true;
                     founditem = item;
@@ -48,6 +48,7 @@ namespace HashTableAndBinarySearchTree
             if (itemfound)
             {
                 linkedlist.Remove(founditem);
+                Console.WriteLine("Value removed");
             }
         }
 

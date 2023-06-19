@@ -37,7 +37,7 @@
             //UC2-- Frequency of words in Large Paragraph
 
             string obj2 = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
-            
+
             string[] words = obj2.Split(' ');
 
             MyMapNode<string, int> wordFrequencyMap = new MyMapNode<string, int>(words.Length);
@@ -52,6 +52,31 @@
             {
                 Console.WriteLine($"Word: {item.Key}, Frequency: {item.Value}");
             }
+
+            //UC3-- removing avoiadable word
+
+            MyMapNode<string, string> hash = new MyMapNode<string, string>(5);
+            hash.Add("0", "Paranoids");
+            hash.Add("0", "are");
+            hash.Add("0", "not");
+            hash.Add("0", "because");
+            hash.Add("0", "they");
+            hash.Add("0", "are");
+            hash.Add("0", "paranoid");
+            hash.Add("0", "but");
+            hash.Add("0", "beacause");
+            hash.Add("0", "they");
+            hash.Add("0", "keep");
+            hash.Add("0", "putting");
+            hash.Add("0", "themselves");
+            hash.Add("0", "deliberately");
+            hash.Add("0", "into");
+            hash.Add("0", "paranoid");
+            hash.Add("0", "avoidable");
+            hash.Add("0", "situations");
+            
+            hash.Remove("0", "avoidable");
+            
         }
     }
 }
