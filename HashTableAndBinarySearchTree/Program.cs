@@ -96,6 +96,8 @@
 
             bst.Display();
 
+            Console.WriteLine(":::::::::::::::::::::::::");
+            bst.Search(63);
         }
     }
 }
